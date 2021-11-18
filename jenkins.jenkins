@@ -17,16 +17,16 @@ pipeline {
                  bat 'C:\\Users\\Public\\clone\\tests.bat'
              }
          }
-          stage('Archive') {
-              steps {
-                  zip zipFile: 'C:/Users/Public/archive/' + env.BUILD_NUMBER.toString() + '.zip', dir: 'C:/Users/Public/clone/UnitTestProject1/bin/Debug'
-              }
-          }
-          stage('Deploy') {
-             steps {
-                  unzip zipFile: 'C:/Users/Public/archive/' + env.BUILD_NUMBER.toString() + '.zip', dir: 'C:/Users/Public/deploy/' + env.BUILD_NUMBER.toString()
-             }
-          }
+         // stage('Archive') {
+         //     steps {
+          //        zip zipFile: 'C:/Users/Public/archive/' + env.BUILD_NUMBER.toString() + '.zip', dir: 'C:/Users/Public/clone/UnitTestProject1/bin/Debug'
+          //    }
+        //  }
+         // stage('Deploy') {
+         //    steps {
+         //         unzip zipFile: 'C:/Users/Public/archive/' + env.BUILD_NUMBER.toString() + '.zip', dir: 'C:/Users/Public/deploy/' + env.BUILD_NUMBER.toString()
+          //   }
+         // }
     }
 
      //post { 
